@@ -5,7 +5,6 @@ using namespace std;
 void selectionSort(vector<int>& arr) {
     int n = arr.size();
 
-    // Outer loop to move the boundary between sorted and unsorted part
     for(int i = 0; i < n-1; i++) {
         int minIdx = i; // Assume the minimum is the first one of unsorted part
 
