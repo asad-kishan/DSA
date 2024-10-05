@@ -136,6 +136,20 @@ public:
         }
         cout << endl;
     }
+
+    // Destructor to clean dynamic memory
+    ~DoublyLinkedList() {
+        Node* current = head;
+        Node* prev;
+
+        while(current) {
+            prev = current;
+            current = current->next;
+            delete prev;
+        }
+
+        head = tail = nullptr;
+    }
 };
 
 int main() {
